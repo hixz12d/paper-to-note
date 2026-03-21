@@ -1,9 +1,52 @@
 # Paper-to-Note
 
-> **Not another chat-with-PDF tool.**  
-> `paper-to-note` is an evidence-backed skill for turning experimental research papers into `Obsidian`-ready `Markdown` notes.
+![Claude Code Skill](https://img.shields.io/badge/Claude-Code%20Skill-blue)
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
+![Focus: Experimental Papers](https://img.shields.io/badge/focus-experimental%20papers-purple)
+
+> Turn experimental paper PDFs into `Markdown` notes that are easy to verify, reuse, and keep.  
+> The goal is not to “chat about a paper”, but to expose the `Figure` logic, experimental parameters, and source evidence behind it.
 
 English (current) | [简体中文](README.md)
+
+## 1-Minute Quick Start
+
+1. Copy `paper-to-note` into your `Claude Code` `skills` directory
+2. Run `/paper-to-note D:/papers/example.pdf` inside `Claude Code`
+3. Get an `Obsidian`-ready `Markdown` note with a research overview, `Figure` argument path, experiments and parameters, and source quotes
+
+For exact commands, continue to the full Quick Start section below.
+
+## At a glance
+
+| Best for | What you get |
+|------|------|
+| Readers of experimental papers in chemistry, materials science, biology, and related fields | `Obsidian`-ready `Markdown` notes |
+| Readers who want to see how the paper’s conclusions are built through `Figures` | `Figure` argument-path analysis |
+| Readers who want to verify critical conditions instead of relying on vague summaries | Experiment-centered parameter tables + source quotes |
+| Readers who want to think while reading | Optional guided discussion + `My Understandings` |
+
+### How this differs from a generic “PDF summary”
+
+- It does not stop at a short summary; it reconstructs the paper’s argument path
+- It does not scatter parameters into loose lists; they stay attached to the experiments they belong to
+- It does not only say what the conclusion is; it keeps source text available for quick checking
+- The output is not a one-off answer, but a note you can continue to edit and keep
+
+### Output preview
+
+```text
+# Journal--Year--Topic
+├── Research overview
+├── Figure argument path
+│   ├── Overall logic
+│   ├── Figure 1-N (role / content / supported conclusion / link to next step)
+│   └── Logic chain
+├── Experiments and parameters
+│   ├── Experiment 1-N (purpose / method summary / parameter table)
+│   └── Source quotes
+└── My Understandings (interactive mode only)
+```
 
 ## What is this?
 
@@ -39,9 +82,9 @@ Instead of only producing a generic summary, it focuses on the parts that matter
 - **`Obsidian`-ready output**  
   The final output is a clean `Markdown` note that can be dropped directly into an `Obsidian` vault.
 
-## What do you get?
+## Detailed note structure
 
-A generated note typically looks like this:
+A generated note typically looks like this. See a real example here: [`examples/sample-output.md`](examples/sample-output.md)
 
 ```text
 # Journal--Year--Topic
@@ -55,8 +98,6 @@ A generated note typically looks like this:
 │   └── Source quotes
 └── My Understandings (interactive mode only)
 ```
-
-See a real example here: [`examples/sample-output.md`](examples/sample-output.md)
 
 ## Quick start
 

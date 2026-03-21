@@ -1,9 +1,52 @@
 # Paper-to-Note
 
-> 这不是另一个“聊天式读 PDF”工具。  
-> 这是一个面向实验型论文的、基于证据的 `paper-to-note` skill，可将 PDF 整理成适合 `Obsidian` 的 `Markdown` 笔记。
+![Claude Code Skill](https://img.shields.io/badge/Claude-Code%20Skill-blue)
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
+![Focus: Experimental Papers](https://img.shields.io/badge/focus-experimental%20papers-purple)
+
+> 把实验型论文 PDF 变成可回查、可复用、可沉淀的 `Markdown` 笔记。  
+> 通过“聊一聊论文”，帮你看清 `Figure` 论证链、实验参数和原文证据。
 
 简体中文（当前） | [英文版](README.en.md)
+
+## 1 分钟上手
+
+1. 把 `paper-to-note` 复制到 `Claude Code` 的 `skills` 目录
+2. 在 `Claude Code` 中运行：`/paper-to-note D:/papers/example.pdf`
+3. 得到一份适合 `Obsidian` 的 `Markdown` 笔记，包含研究概述、`Figure` 论证路径、实验与参数、原文参考摘录
+
+需要具体命令的话，继续看下方的“快速开始”。
+
+## 封面速览
+
+| 适合谁 | 你会得到什么 |
+|------|------|
+| 读化学、材料、生物等实验型论文的人 | 适合 `Obsidian` 的 `Markdown` 笔记 |
+| 想快速看懂作者如何用 `Figure` 推进结论的人 | `Figure` 论证路径分析 |
+| 想回查关键实验条件、不想只看空泛摘要的人 | 以实验为单位的参数表 + 原文摘录 |
+| 想边读边整理理解的人 | 可选交互讨论 + `My Understandings` |
+
+### 它和普通“读 PDF 总结”有什么不同
+
+- 不只给一段总结，而是拆开作者的论证路径
+- 不把参数散落成清单，而是挂在对应实验下面
+- 不只说“结论是什么”，还尽量保留可以快速核查的原文依据
+- 输出不是一次性回答，而是一份适合继续积累的笔记文件
+
+### 输出示意
+
+```text
+# 期刊--年份--主题
+├── 研究概述
+├── Figure 论证路径
+│   ├── 整体思路
+│   ├── Figure 1-N（作用 / 内容 / 支撑结论 / 与下文关系）
+│   └── 论证逻辑链
+├── 实验与参数
+│   ├── 实验 1-N（目的 / 方法概述 / 参数表）
+│   └── 原文参考摘录
+└── My Understandings（仅交互模式）
+```
 
 ## 这是什么
 
@@ -39,9 +82,9 @@
 - **可直接入库的输出格式**  
   最终输出是适合 `Obsidian` 使用的 `Markdown` 文件，便于继续整理、链接和检索。
 
-## 你会得到什么
+## 详细输出结构
 
-生成的笔记通常包含以下结构：
+生成的笔记通常包含以下结构，可参考真实示例：[`examples/sample-output.md`](examples/sample-output.md)
 
 ```text
 # 期刊--年份--主题
@@ -55,8 +98,6 @@
 │   └── 原文参考摘录
 └── My Understandings（仅交互模式）
 ```
-
-可参考真实示例：[`examples/sample-output.md`](examples/sample-output.md)
 
 ## 快速开始
 
