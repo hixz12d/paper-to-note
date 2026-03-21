@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Generated notes (user output, not part of the skill)
+*.generated.md
