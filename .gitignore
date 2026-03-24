@@ -9,6 +9,14 @@ desktop.ini
 *~
 .vscode/
 .idea/
+.claude/
 
 # Generated notes (user output, not part of the skill)
 *.generated.md
+
+# Local CLI workspace (prompts for Codex / Claude review, not part of the skill)
+Cli/
+.ace-tool/
+
+# MinerU preprocessing cache
+.mineru-cache/

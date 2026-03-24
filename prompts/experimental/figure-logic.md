@@ -40,6 +40,7 @@
   - turn-on response → 荧光增强响应，absorption red-shift → 吸收红移
   - cation selectivity → 阳离子选择性，release → 释放
 - 首次出现的重要概念可在中文后括号标注英文，之后只用中文
+- 数学表达式使用 LaTeX 语法：行内用 `$...$`，独立公式用 `$$...$$`。下标用 `_{}`（如 `$k_{\text{obs}}$`、`$\Delta G$`），不要将公式写成纯文本
 
 ## 输出格式
 
