@@ -1,15 +1,19 @@
-# Chin-Chem-Lett--2025--萘酰亚胺基NO供体光控释放与锌离子荧光探针
+# Nat-Commun--2021--超分辨形态相关细胞器识别追踪多细胞器$Zn^{2+}$
 
-> **Title**: Photocalibrated NO release from the zinc ion fluorescent probe based on naphthalimide and its application in living cells
-> **Authors**: Zhixiao Xiong, Shanni Qiu, Yuyu Wang, Houna Duan, Yi Xiao, Yufang Xu, Weiping Zhu, Xuhong Qian
-> **Journal**: Chinese Chemical Letters, 2025
-> **DOI**: 10.1016/j.cclet.2024.110002
+> **Title**: Simultaneous Zn2+ tracking in multiple organelles using super-resolution morphology-correlated organelle identification in living cells
+> **Authors**: Hongbao Fang, Shanshan Geng, Mingang Hao, Qixin Chen, Minglun Liu, Chunyan Liu, Zhiqi Tian, Chengjun Wang, Takanori Takebe, Jun-Lin Guan, Yuncong Chen, Zijian Guo, Weijiang He & Jiajie Diao
+> **Journal**: Nature Communications, 2021
+> **DOI**: https://doi.org/10.1038/s41467-020-20309-7
 
 ---
 
 ## 研究概述
 
-一氧化氮（NO）与锌离子（Zn²⁺）在心血管、神经和免疫系统中存在密切且复杂的相互作用，但此前尚无单一分子能同时实现 NO 可控释放和 Zn²⁺ 实时检测。本文设计并合成了一系列基于萘酰亚胺（naphthalimide）荧光团和 *N,N*-双(2-吡啶甲基)胺（DPA）受体的 NO 供体（NOD-NY、NOD-AY、NOD-BY）。在 365 nm 紫外光照射下，供体通过 N-亚硝基均裂定量释放 NO，同时原位生成基于光诱导电子转移（PET）机理的高灵敏 Zn²⁺ 荧光探针。在活细胞实验中，释放的 NO 可刺激金属硫蛋白（metallothionein）释放 Zn²⁺，而光生探针 Zn-HN 可实时监测 NO 引起的内源性 Zn²⁺ 浓度变化，为研究 NO/Zn²⁺ 生理病理互作提供了新工具。
+游离 $Zn^{2+}$ 在细胞代谢和信号调控中发挥重要作用，被视为潜在的"第二信使"[[#^ref-4|[4]]]，锌火花（zinc sparks）和锌波（zinc waves）等新现象的发现进一步揭示了其信号活性[[#^ref-8|[8]]]。不同细胞器具有不同的 $Zn^{2+}$ 水平和动态变化[[#^ref-10|[10]]]，多个涉及多细胞器协作的生理过程（尤其是自噬）与 $Zn^{2+}$ 波动密切相关[[#^ref-11|[11]]]。然而，此前没有方法能用单个探针同时追踪两个以上细胞器中的 $Zn^{2+}$ 信号——荧光成像需要多轮双染色和不同探针[[#^ref-21|[21]]]，同步辐射 X 射线荧光显微镜（SXRF）虽可同时检测但仅适用于脱水细胞。
+
+本文提出了**多细胞器同步 $Zn^{2+}$ 追踪方法（Zn-STIMO）**，结合结构光照明显微镜（SIM，空间分辨率 ~100 nm[[#^ref-28|[28]]]）和单一 $Zn^{2+}$ 荧光探针 NapBu-BPEA，通过超分辨形态识别在活细胞中同步追踪多个细胞器的 $Zn^{2+}$ 动态。探针设计的核心策略是通过调节萘酰亚胺衍生物的亲脂性，使其在不添加靶向基团的情况下分布于除细胞核外的多个细胞器。
+
+利用 Zn-STIMO，作者发现 CCCP 诱导的线粒体自噬伴随游离 $Zn^{2+}$ 升高，且不同细胞器中的 $Zn^{2+}$ 变化存在显著差异——自噬体/自噬溶酶体中增幅最大，线粒体次之，内质网最小；而 EBSS 诱导的饥饿自噬则表现为 $Zn^{2+}$ 降低。此外，NapBu-BPEA 在人源肝脏类器官中也实现了超分辨细胞器成像，展示了该方法向更复杂生物系统拓展的潜力。
 
 ---
 
@@ -17,225 +21,254 @@
 
 ### 整体思路
 
-作者围绕"光控 NO 释放 + 原位 Zn²⁺ 检测"这一核心功能，按照**分子设计 → 体外光谱验证 → 细胞 NO 释放确认 → NO 诱导 Zn²⁺ 释放监测**的逻辑递进展开论证，从分子机理到细胞功能逐步构建证据链。
+作者通过 8 个 Figure 构建了一条从概念提出→探针设计与验证→细胞内功能验证→生物学应用→方法拓展的完整论证链。先展示 Zn-STIMO 的方法概念和探针设计逻辑（Fig. 1），然后在体外验证探针的光谱性质和 $Zn^{2+}$ 响应（Fig. 2），接着在活细胞中验证多细胞器分布和 SIM 成像能力（Fig. 3），再确认细胞内 $Zn^{2+}$ 可逆传感（Fig. 4），随后进入核心生物学应用——自噬过程中的 $Zn^{2+}$ 动态（Fig. 5），用 Zn-STIMO 揭示不同细胞器的差异化响应（Fig. 6），展示时间分辨动态追踪（Fig. 7），最终将方法拓展到三维类器官系统（Fig. 8）。
 
-### Figure 1: 分子设计与识别机理
+### Figure 1: Zn-STIMO 概念与探针分子设计
 
-- **作用**: 展示整个分子体系的设计逻辑和工作原理，为后续实验提供机理框架
-- **内容**: (A) 亚硝胺光解释放 NO 的一般机理；(B) NO 供体结构及其光激活后通过 DPA 受体识别 Zn²⁺ 的 PET 机制
-- **支撑结论**: 含吸电子基团的 N-亚硝胺可在光解下均裂释放 NO；NO 释放后生成的 DPA 结构探针通过 PET 抑制实现 Zn²⁺ 荧光增强响应
-- **与下文关系**: 设计方案确定后，需要用光谱实验验证光解行为和 Zn²⁺ 选择性 → 引出 Figure 2
+- **作用**: 提出整体研究方案，展示通过调节亲脂性设计多细胞器分布探针的策略
+- **内容**: (a) Zn-STIMO 概念示意图——用 SIM + 单一探针实现形态识别的多细胞器 $Zn^{2+}$ 追踪；(b) 探针分子设计——以 1,8-萘酰亚胺（Nap）为母核[[#^ref-35|[35]]]，BPEA 为 $Zn^{2+}$ 螯合基团[[#^ref-37|[37]]]，通过将乙二醇尾链替换为烷基链（乙基→NapEt-BPEA、丁基→NapBu-BPEA）提高亲脂性
+- **支撑结论**: 亲脂性调节可有效改变探针的亚细胞分布——前体 Naph-BPEA 在 $Zn^{2+}$ 加载后会重分布至细胞核[[#^ref-39|[39]]]，而 NapBu-BPEA 通过增大 $\log P$ 避免了这一问题
+- **与下文关系**: 确立了探针候选分子 NapBu-BPEA，引出其体外光谱表征
 
-### Figure 2: 体外光谱表征与金属离子选择性
+### Figure 2: NapBu-BPEA 光谱特性与 $Zn^{2+}$ 响应
 
-- **作用**: 证明 NOD-NY 的光解行为符合设计预期，并验证光解产物 Zn-HN 对 Zn²⁺ 的高选择性
-- **内容**: (A) UV-vis 吸收光谱随光照红移（350 → 450 nm）；(B) 荧光发射光谱随 Zn²⁺ 增强；(C) 光解动力学曲线（约 30 s 完成）及加入 Zn²⁺ 后荧光变化；(D) 16 种金属离子的选择性和竞争性测试
-- **支撑结论**: NOD-NY 可在 ~30 s 内完成光解并定量释放 NO，伴随吸收红移；Zn-HN 对 Zn²⁺ 具有优异选择性，仅 Cd²⁺ 有微弱干扰（但因生物体内含量低可忽略）
-- **与下文关系**: 体外性能验证完毕，需在细胞水平确认 NO 释放功能 → 引出 Figure 3
+- **作用**: 系统验证探针的光学性质、$Zn^{2+}$ 特异性响应及可逆性
+- **内容**: 吸收/发射光谱；$Zn^{2+}$ 滴定荧光增强曲线（$F/F_0 = 3.6$）；阳离子选择性测试（$\text{Na}^+$、$\text{K}^+$、$\text{Ca}^{2+}$、$\text{Mg}^{2+}$ 1000 当量无干扰）；TPEN 螯合后荧光恢复的可逆性循环；pH 独立性
+- **支撑结论**: NapBu-BPEA 具有高量子产率（$\Phi = 0.80$）、高选择性、可逆的 $Zn^{2+}$ 荧光增强响应，$K_d = 4.98\ \text{nM}$ 适合检测细胞器中游离 $Zn^{2+}$（0.2–70 nM 范围）
+- **与下文关系**: 体外验证完毕，转向细胞内分布和 SIM 成像验证
 
-### Figure 3: 细胞水平 NO 释放验证
+### Figure 3: SIM 超分辨成像与多细胞器共定位
 
-- **作用**: 在活细胞中证明 NOD-NY 光解后确实释放了 NO，并揭示 NO 的亚细胞扩散行为
-- **内容**: A549 细胞中 NOD-NY（绿色通道）和 Mito-NO（红色通道，靶向线粒体的 NO 探针）在光照前后的共聚焦成像；叠加图像 Pearson 系数 0.52
-- **支撑结论**: 光照后绿色荧光增强证明 Zn-HN 探针原位生成并识别了游离 Zn²⁺；红色荧光增强证明 Mito-NO 在线粒体中捕获了 NOD-NY 释放的 NO；Pearson 系数 0.52 表明 NO 从溶酶体扩散进入线粒体
-- **与下文关系**: 已确认 NO 在细胞中释放并可跨细胞器扩散，进一步验证 NO 能否刺激 Zn²⁺ 释放并被探针检测 → 引出 Figure 4
+- **作用**: 证明 NapBu-BPEA 可分布于多个细胞器，且 SIM 成像下可通过形态识别细胞器
+- **内容**: 与四种细胞器标记物的共定位（PCC：内质网 0.717、线粒体 0.563、溶酶体 0.509、细胞核 0.086）；SIM vs 共聚焦对比——SIM 下可清晰分辨点状溶酶体、棒状线粒体嵴和网状内质网；FWHM 达 100 nm（与 Atto 647N 的 91 nm 相当[[#^ref-47|[47]]]）；光稳定性优于 MitoTracker Deep Red
+- **支撑结论**: NapBu-BPEA 在 SIM 下实现了 ~100 nm 空间分辨率，可通过形态特征区分线粒体、内质网和溶酶体，且光稳定性优异
+- **与下文关系**: 成像基础建立，转向验证探针在细胞内能否可逆感应 $Zn^{2+}$
 
-### Figure 4: NO 诱导内源性 Zn²⁺ 释放的实时监测
+### Figure 4: 细胞内可逆 $Zn^{2+}$ 传感
 
-- **作用**: 实现论文的最终目标 — 证明 NO 释放可刺激 metallothionein 释放 Zn²⁺，且光生探针可实时监测该过程
-- **内容**: (A) A549 细胞双通道成像：绿色通道（Zn-HN 检测 Zn²⁺）和蓝色通道（Zinquin 商用 Zn²⁺ 探针）在光照前后及加入 TPEN 后的变化；(B) 荧光强度定量：绿色 5.88 倍增强，蓝色 2.50 倍增强
-- **支撑结论**: NOD-NY 光激活后生成的 Zn-HN 是"关-开"型 Zn²⁺ 探针，可灵敏地实时监测 NO 诱导的内源性 Zn²⁺ 浓度变化；TPEN 加入后双通道荧光减弱进一步确认荧光来源于 Zn²⁺ 结合
-- **与下文关系**: 作为全文的终极功能验证，直接支撑结论
+- **作用**: 验证 NapBu-BPEA 在活细胞中对外源 $Zn^{2+}$ 的可逆响应能力
+- **内容**: ZnPT 加载后荧光即时增强（前 4 min 线性增长）；TPEN 螯合后荧光恢复；剂量依赖性；加载/螯合过程中探针点状分布模式不变（区别于 Naph-BPEA 向细胞核重分布[[#^ref-39|[39]]]）
+- **支撑结论**: NapBu-BPEA 可在活细胞中可逆追踪游离 $Zn^{2+}$，且 $Zn^{2+}$ 结合不改变其亚细胞分布，满足 Zn-STIMO 的核心要求
+- **与下文关系**: 传感功能验证完成，正式进入生物学应用——自噬中的 $Zn^{2+}$ 动态
+
+### Figure 5: 线粒体自噬中的 $Zn^{2+}$ 变化
+
+- **作用**: 揭示 CCCP 诱导的线粒体自噬与游离 $Zn^{2+}$ 升高之间的关联
+- **内容**: 自噬细胞 vs 非自噬细胞荧光对比（~2.0 倍增强）；TPEN 验证增强来自游离 $Zn^{2+}$；CCCP 处理后动态追踪（初始 5 min 快速升高，随后缓慢）；ATG13 KO[[#^ref-51|[51]]] 和 FIP200 KO[[#^ref-50|[50]]] HeLa 细胞作为对照——CCCP 不诱导自噬也不引起 $Zn^{2+}$ 升高；EBSS 诱导的非选择性自噬反而导致 $Zn^{2+}$ 降低
+- **支撑结论**: CCCP 诱导的线粒体自噬伴随游离 $Zn^{2+}$ 升高，该效应依赖自噬通路（KO 验证）；不同类型自噬对 $Zn^{2+}$ 的影响方向不同
+- **与下文关系**: 整体 $Zn^{2+}$ 变化确认后，引出核心问题——不同细胞器中 $Zn^{2+}$ 如何差异化变化？
+
+### Figure 6: Zn-STIMO 揭示细胞器差异化 $Zn^{2+}$ 响应
+
+- **作用**: 核心创新——首次用单一探针在亚细胞水平定量展示不同细胞器的 $Zn^{2+}$ 差异化响应
+- **内容**: CCCP 诱导线粒体自噬后各细胞器 $Zn^{2+}$ 增强倍数——自噬体/自噬溶酶体最高、线粒体 ~1.89×、内质网 ~1.55×；NapBu-BPEA 与 DAPRed 在 CCCP 处理细胞中 PCC ~0.70（确认探针进入自噬体）；$Zn^{2+}$ 热力图显示线粒体和内质网内部分布不均匀；EBSS 诱导自噬中线粒体和内质网 $Zn^{2+}$ 均降低
+- **支撑结论**: Zn-STIMO 成功实现了亚细胞水平 $Zn^{2+}$ 的差异化定量，CCCP 自噬中 $Zn^{2+}$ 升高主要来源于自噬体/溶酶体区室
+- **与下文关系**: 静态差异化结果确认，引出时间分辨动态追踪
+
+### Figure 7: 动态 Zn-STIMO 时间分辨追踪
+
+- **作用**: 展示 Zn-STIMO 方法的时间分辨动态追踪能力
+- **内容**: CCCP 处理后的时间序列 SIM 成像，展示各细胞器 $Zn^{2+}$ 随时间的变化趋势
+- **支撑结论**: CCCP 处理 5 min 即可观察到明显 $Zn^{2+}$ 增强，自噬体/自噬溶酶体的增强最为显著
+- **与下文关系**: 方法在细胞层面全面验证，引出向更复杂系统的拓展
+
+### Figure 8: 肝脏类器官中的超分辨成像
+
+- **作用**: 将 Zn-STIMO 从二维细胞培养拓展至三维人源类器官系统
+- **内容**: CCCP 处理的人 iPSC 分化肝脏类器官[[#^ref-56|[56]]]的 Z-stack SIM 成像（深度 2.4、6.4、14.4 $\mu\text{m}$）；分辨率 <200 nm；可通过形态识别内质网
+- **支撑结论**: NapBu-BPEA + SIM 可在复杂三维类器官中实现细胞器识别和 $Zn^{2+}$ 分布追踪
+- **与下文关系**: 终点——展示 Zn-STIMO 在类器官及更复杂组织中的应用前景
 
 ### 论证逻辑链
 
-Figure 1（分子设计：N-亚硝基萘酰亚胺光解释放 NO + DPA 识别 Zn²⁺ 的 PET 机理）
-  → Figure 2（体外验证：光解红移、30 s 动力学、Zn²⁺ 高选择性）
-  → Figure 3（细胞 NO 释放确认：NOD-NY 光解产 NO，NO 从溶酶体扩散至线粒体）
-  → Figure 4（终极功能：NO 刺激 metallothionein 释放 Zn²⁺，Zn-HN 实时荧光监测，5.88 倍增强）
+Figure 1（概念与探针设计 → 亲脂性调控策略）
+  → Figure 2（体外光谱验证 → 高量子产率、高选择性、可逆响应）
+  → Figure 3（细胞多细胞器分布 + SIM 100 nm 分辨率 → 形态识别可行）
+  → Figure 4（细胞内 $Zn^{2+}$ 可逆传感 → 分布不变，功能确认）
+  → Figure 5（线粒体自噬 + $Zn^{2+}$ 升高 → 生物学关联建立）
+  → Figure 6（Zn-STIMO 差异化定量 → 自噬体 > 线粒体 > 内质网）
+  → Figure 7（动态时间分辨追踪 → 方法完整性验证）
+  → Figure 8（类器官成像 → 拓展至三维复杂系统）
 
 ---
 
 ## 实验与参数
 
-### 实验 1: NOD-NY 光解的 UV-vis 吸收与荧光发射光谱
+### 实验 1: NapBu-BPEA 体外光谱表征
 
-**目的**: 验证 NOD-NY 在紫外光照下的光解行为及其光谱变化
-**方法概述**: 在 PBS 缓冲液中对 NOD-NY 进行紫外光照，监测吸收和荧光光谱随时间的变化
+**目的**: 系统评价 NapBu-BPEA 的光学性质和 $Zn^{2+}$ 响应特性
+**方法概述**: 在 HEPES 缓冲液中测量吸收/发射光谱、$Zn^{2+}$ 滴定曲线、阳离子选择性和可逆性
 
 | 参数 | 值 |
 |------|-----|
-| 缓冲液 | PBS（10⁻² mol/L，pH 7.4） |
-| 光照波长 | 365 nm 紫外光 |
-| 吸收红移范围 | 350 nm → 450 nm |
-| 光解完成时间 | 约 30 s |
+| 探针浓度 | $10\ \mu\text{M}$ |
+| 缓冲液 | HEPES（50 mM，含 100 mM $\text{KNO}_3$，10% DMSO，pH 7.2） |
 | 激发波长 | 450 nm |
-| 发射波长 | 545 nm |
+| 最大吸收波长 ($\lambda_{\max}$) | 454 nm |
+| 摩尔消光系数 ($\varepsilon$) | $1.226 \times 10^4\ \text{M}^{-1}\text{cm}^{-1}$ |
+| 发射峰 | 540 nm（加 $Zn^{2+}$ 后蓝移至 535 nm） |
+| 量子产率——游离态 ($\Phi$) | 0.32 |
+| 量子产率——$Zn^{2+}$ 络合态 ($\Phi$) | 0.80 |
+| 荧光增强倍数 ($F/F_0$) | 3.6（540 nm） |
+| 解离常数 ($K_d$) | 4.98 nM |
+| 化学计量比 | 1:1（Job's plot + HR-MS 确认） |
+| pH 响应范围 | 4.0–8.0（$Zn^{2+}$ 响应不受 pH 影响） |
+| $\log P$（游离态） | 4.97 |
+| $\log P_{\text{Zn}}$（络合态） | 8.53 |
+| $\Delta E_{\text{ST}}$ | ~1.04 eV（不利于系间窜越→低 ROS，高光稳定性） |
 
-> **原文参考** — "with the continuation of the ultraviolet irradiation time, the maximum absorption in the ultraviolet spectrum curve gradually red-shifted from 350 nm to 450 nm... The photolysis kinetics curve showed that NOD-NY released NO from fast to slow, and the whole process took about 30 s."
+> **原文参考** — "The broad absorption band of NapBu-BPEA was centered at 454 nm with the molar absorption coefficient ε = 1.226 × 10⁴ M⁻¹cm⁻¹. The emission was centered at 540 nm; quantum yield Φ = 0.32. The fluorescence spectra of NapBu-BPEA with the gradual addition of Zn²⁺ showed a linear emission enhancement, and a stable emission spectrum was achieved at 1 equivalent of Zn²⁺."
 
-### 实验 2: 金属离子选择性与竞争性测试
+### 实验 2: 细胞培养与细胞毒性评价
 
-**目的**: 评估 Zn-HN 对 Zn²⁺ 的选择性和在其他金属离子共存下的竞争性
-**方法概述**: 在 PBS 中依次加入各种金属离子和 Zn²⁺，测量荧光响应
-
-| 参数 | 值 |
-|------|-----|
-| 缓冲液 | PBS（10⁻² mol/L，pH 7.4） |
-| NOD-NY 浓度 | 10⁻⁵ mol/L |
-| 竞争金属离子浓度 | 3 × 10⁻⁵ mol/L |
-| Zn²⁺ 浓度 | 10⁻⁵ mol/L |
-| 测试离子种类 | Zn²⁺、Li⁺、Mn²⁺、Fe³⁺、K⁺、Ca²⁺、Na⁺、Ag⁺、Cr³⁺、Pb²⁺、Hg²⁺、Ni⁺、Fe²⁺、Cd²⁺、Co²⁺、Cu²⁺（高氯酸盐） |
-| 激发/发射波长 | λex = 450 nm，λem = 545 nm |
-
-> **原文参考** — "Upon addition of 3 equiv. different metal ions, negligible changes were observed in the fluorescence emission spectra. However, the fluorescence intensity was significantly enhanced after Zn²⁺ was added."
-
-### 实验 3: HPLC 验证光解产物
-
-**目的**: 通过色谱法证明 NOD-AY 光解产物即为 Zn²⁺ 荧光探针 Zn-HA
-**方法概述**: 比较 NOD-AY、其光解产物和 Zn-HA 标准品的 HPLC 保留时间
+**目的**: 评估 NapBu-BPEA 对 HeLa 细胞的毒性和孵育条件
+**方法概述**: HeLa 细胞与 NapBu-BPEA 共孵育，WST 法（LDH 释放）检测细胞活力
 
 | 参数 | 值 |
 |------|-----|
-| NOD-AY 保留时间 | 8.290 min |
-| 光解产物保留时间 | 11.564 min |
-| Zn-HA 标准品保留时间 | 11.510 min |
+| 细胞系 | HeLa（野生型、FIP200 KO、ATG13 KO） |
+| 培养基 | DMEM + 10% FBS |
+| 探针浓度 | $20\ \mu\text{M}$ |
+| 孵育时间 | 1 h（10 min 开始出现荧光，1 h 分布稳定） |
+| 细胞毒性检测 | WST 法（LDH 释放） |
+| 24 h 细胞活力 | >80% |
 
-> **原文参考** — "the retention time of NOD-AY photolysis products (Rt = 11.564 min) was consistent with the retention time of Zn²⁺ probe Zn-HA (Rt = 11.510 min)"
+> **原文参考** — "Cell viability >80% after 24 h incubation with 20 μM probe (low cytotoxicity). Punctate fluorescence in cytoplasm (not nucleus) after 10 min; stabilized at 1 h."
 
-### 实验 4: EPR 检测 NO 自由基释放
+### 实验 3: SIM 超分辨成像
 
-**目的**: 直接检测光控条件下 NO 自由基的产生
-**方法概述**: 利用 NO 清除剂 PTIO 的 EPR 特征信号变化，检测光解过程中 NO 释放
-
-| 参数 | 值 |
-|------|-----|
-| NO 清除剂 | PTIO（2-苯基-4,4,5,5-四甲基咪唑啉-3-氧化物-1-氧基） |
-| 检测手段 | EPR |
-| 产物 | PTI + NO₂ |
-
-> **原文参考** — "Using an EPR instrument to detect photo-controlled generation of nitric oxide free radicals, we found that with the extension of light illumination time, the donor compound had completed photolysis and all nitric oxide free radicals had been released"
-
-### 实验 5: DAN 定量 NO 释放
-
-**目的**: 验证供体化合物可定量释放 NO
-**方法概述**: 使用商用 NO 活性检测试剂 DAN 在不同浓度下测量荧光变化
+**目的**: 利用 SIM 实现 NapBu-BPEA 标记的活细胞超分辨成像
+**方法概述**: 使用 Nikon N-SIM 系统对活细胞进行结构光照明成像
 
 | 参数 | 值 |
 |------|-----|
-| 检测试剂 | DAN（2,3-二氨基萘） |
-| 测试对象 | NOD-AY（多种浓度） |
-| 线性相关系数 | R > 0.99 |
+| 成像系统 | Nikon N-SIM |
+| 激发波长 | 488 nm |
+| 发射收集范围 | 500–550 nm |
+| 空间分辨率（FWHM） | ~100 nm |
+| 参考基准 | Atto 647N: 91 nm |
+| 光稳定性 | 300 s SIM 激发下荧光几乎不衰减 |
+| 对照光稳定性 | MitoTracker Deep Red 120 s 后降至 <30% |
 
-> **原文参考** — "We tested the donor compound NOD-AY at diverse concentrations and found the excellent linear relationship (R > 0.99) between the change in fluorescence intensity and the concentration."
+> **原文参考** — "SIM via NapBu-BPEA achieved FWHM down to 100 nm (comparable to Atto 647N at 91 nm). NapBu-BPEA fluorescence nearly stable over 300 s SIM excitation; MTDR dropped to <30% after 120 s."
 
-### 实验 6: pH 稳定性测试
+### 实验 4: 共定位分析
 
-**目的**: 评估供体及其光解产物在生理 pH 范围内的稳定性
-**方法概述**: 在不同 pH 条件下测试 NOD-NY、NOD-AY、NOD-BY 及其光解产物的稳定性
-
-| 参数 | 值 |
-|------|-----|
-| pH 范围 | 6.0–8.0 |
-| 测试化合物 | NOD-NY、NOD-AY、NOD-BY 及其光解产物 |
-| 结果 | 在 pH 6.0–8.0 范围内均表现稳定 |
-
-> **原文参考** — "NOD-NY, NOD-AY, NOD-BY and their photolysis products exhibited good stability in the physiological range of pH 6.0–8.0."
-
-### 实验 7: CCK8 细胞毒性测试
-
-**目的**: 评估 NO 供体及其光解产物的生物相容性
-**方法概述**: 使用 CCK8 法检测三种供体在光解前后对 Raw264.7 和 A549 细胞的毒性
+**目的**: 定量验证 NapBu-BPEA 在不同细胞器中的分布
+**方法概述**: 与商用细胞器标记物双通道 SIM 成像，计算 Pearson 相关系数（PCC）
 
 | 参数 | 值 |
 |------|-----|
-| 细胞系 | Raw264.7、A549 |
-| 浓度范围 | 0–2 × 10⁻⁵ mol/L |
-| 孵育时间 | 24 h |
-| 细胞存活率 | > 80% |
+| 溶酶体标记物 | LysoTracker Red |
+| 溶酶体 PCC | 0.509 |
+| 线粒体标记物 | MitoTracker Deep Red |
+| 线粒体 PCC | 0.563 |
+| 内质网标记物 | ER-Tracker Red |
+| 内质网 PCC | 0.717 |
+| 细胞核标记物 | Hoechst 33258 |
+| 细胞核 PCC | 0.086（基本不进入细胞核） |
+| 分析软件 | CellProfiler |
 
-> **原文参考** — "The cells viability was above 80% with the concentration of them ranging from 0 to 2 × 10⁻⁵ mol/L after 24 h incubation, which indicated that NO donors had low toxicity and could be used for imaging in living cells."
+> **原文参考** — "Co-localization Pearson's correlation coefficients (PCCs): LysoTracker Red (lysosomes) 0.509, MitoTracker Deep Red (mitochondria) 0.563, ER-Tracker Red (ER) 0.717, Hoechst 33258 (nucleus) 0.086."
 
-### 实验 8: 流式细胞术摄取分析
+### 实验 5: 细胞内 $Zn^{2+}$ 可逆传感
 
-**目的**: 比较三种光解产物探针在活细胞中的摄取效率
-**方法概述**: 流式细胞术分析 Zn-HN、Zn-HA、Zn-HB 在 A549 细胞中的摄取
-
-| 参数 | 值 |
-|------|-----|
-| 细胞系 | A549 |
-| 测试探针 | Zn-HN、Zn-HA、Zn-HB |
-| 最佳摄取 | Zn-HA（含二甘醇胺结构，水溶性好） |
-
-> **原文参考** — "probe Zn-HA, which contains diethylene glycol amine structure, had the best uptake in living A549 cells."
-
-### 实验 9: 亚细胞定位实验
-
-**目的**: 确定三种探针在细胞内的亚细胞定位
-**方法概述**: 与商用溶酶体和线粒体标记物共染，共聚焦成像分析共定位
+**目的**: 验证 NapBu-BPEA 在活细胞中对外源 $Zn^{2+}$ 加载和螯合的可逆响应
+**方法概述**: 用 ZnPT 向细胞递送 $Zn^{2+}$，观察荧光增强；再用 TPEN 螯合，验证可逆性
 
 | 参数 | 值 |
 |------|-----|
-| 细胞系 | A549 |
-| 标记物 | 商用溶酶体标记物、商用线粒体标记物 |
-| Zn-HN 定位 | 细胞质（无显著细胞器定位） |
-| Zn-HA 定位 | [信息不足，建议查阅原文] |
-| Zn-HB 定位 | 线粒体（Pearson 系数 0.83） |
+| $Zn^{2+}$ 递送载体 | ZnPT |
+| 荧光增强特征 | 加入 ZnPT 后即刻增强，前 4 min 近线性增长，~4 min 后稳定 |
+| 剂量响应 | ZnPT 浓度越高，荧光增强越大 |
+| 螯合剂 | TPEN |
+| 螯合效果 | 荧光显著降低，确认可逆性 |
+| 分布变化 | 加载/螯合全程保持点状细胞质分布，不进入细胞核 |
 
-> **原文参考** — "the fluorescence imaging of Zn-HB was overlapped well with commercial mitochondrial red fluorescent probe, with the Pearson's correlation coefficient at 0.83, which indicated that Zn-HB was mainly localized in mitochondrion."
+> **原文参考** — "Exogenous Zn²⁺ loading via ZnPT: instant fluorescence enhancement, almost linear increase in first 4 min, stable after 4 min. Punctate cytoplasmic distribution retained upon Zn²⁺ loading (unlike Naph-BPEA which redistributes to nucleus)."
 
-### 实验 10: 细胞水平 NO 释放成像
+### 实验 6: 自噬诱导与多细胞器 $Zn^{2+}$ 追踪（Zn-STIMO）
 
-**目的**: 在活细胞中验证 NOD-NY 光解确实释放了 NO
-**方法概述**: NOD-NY 与线粒体靶向 NO 探针 Mito-NO 共孵育 A549 细胞，光照后双通道共聚焦成像
-
-| 参数 | 值 |
-|------|-----|
-| 细胞系 | A549 |
-| NOD-NY 浓度 | 5 × 10⁻⁶ mol/L |
-| Mito-NO 浓度 | 5 × 10⁻⁶ mol/L |
-| 孵育条件 | 避光，10 min |
-| 绿色通道 | λex = 488 nm，λem = 500–560 nm |
-| 红色通道 | λex = 559 nm，λem = 570–670 nm |
-| Pearson 系数 | 0.52（绿/红通道叠加） |
-| 标尺 | 20 μm |
-
-> **原文参考** — "the imaging experiment was the fluorescence changes of the cells before and after the mercury lamp illumination in the same field of view... the Pearson's correlation coefficient only at 0.52, which indicated that the NO released by NOD-NY could diffuse into the mitochondrion and be captured by Mito-NO"
-
-### 实验 11: TPEN 淬灭实验验证 Zn²⁺ 荧光来源
-
-**目的**: 用 Zn²⁺ 螯合剂 TPEN 确认绿色荧光确实来源于探针与 Zn²⁺ 结合
-**方法概述**: NOD-AY 光照后加入不同浓度 TPEN，观察荧光减弱
+**目的**: 研究不同自噬模型中各细胞器的 $Zn^{2+}$ 动态变化
+**方法概述**: CCCP 或 EBSS 分别诱导线粒体自噬和非选择性自噬，用 NapBu-BPEA/SIM 进行多细胞器 $Zn^{2+}$ 差异化追踪
 
 | 参数 | 值 |
 |------|-----|
-| 细胞系 | A549 |
-| NOD-AY 浓度 | 5 × 10⁻⁶ mol/L |
-| TPEN 浓度 | 10⁻⁶ mol/L 或 5 × 10⁻⁵ mol/L |
-| 结果 | 绿色荧光不同程度减弱 |
+| CCCP 浓度 | $10\ \mu\text{M}$ |
+| CCCP 长期处理 | 24 h |
+| CCCP 动态追踪 | 初始 5 min 快速升高，随后缓慢 |
+| 自噬检测试剂 | DAPRed（$1\ \mu\text{M}$，孵育 30 min） |
+| NapBu-BPEA 与 DAPRed 的 PCC（CCCP 处理后） | ~0.70 |
+| 自噬细胞整体 $Zn^{2+}$ 增强 | ~2.0 倍（vs 非自噬细胞） |
+| 线粒体 $Zn^{2+}$ 增强 | ~1.89× |
+| 内质网 $Zn^{2+}$ 增强 | ~1.55× |
+| 自噬体/自噬溶酶体 | $Zn^{2+}$ 增幅最大 |
+| EBSS 诱导结果 | $Zn^{2+}$ 降低（与 CCCP 相反） |
+| 基因敲除对照 | ATG13 KO、FIP200 KO HeLa：CCCP 不诱导自噬也不引起 $Zn^{2+}$ 升高 |
+| 统计方法 | 均值 $\pm$ 标准差，双尾 Student's $t$-test，$p < 0.05$ |
 
-> **原文参考** — "After the subsequent addition of 10⁻⁶ mol/L or 5 × 10⁻⁵ mol/L of membrane-permeable Zn²⁺ chelator, TPEN, the green fluorescent signal had weakened to varying degrees, indicating that the green fluorescence was originated from the binding of the donor's photolysis product Zn-HA with free Zn²⁺."
+> **原文参考** — "NapBu-BPEA fluorescence in mitophagic cells: ~2.0-fold higher than non-autophagic cells. ATG13 KO and FIP200 KO HeLa cells: CCCP did not induce autophagy or Zn²⁺ enhancement, confirming CCCP-induced Zn²⁺ release is autophagy-associated."
 
-### 实验 12: NO 诱导内源性 Zn²⁺ 释放的实时监测
+### 实验 7: 肝脏类器官超分辨成像
 
-**目的**: 验证 NO 释放可刺激 metallothionein 释放 Zn²⁺，并用光生探针实时检测
-**方法概述**: NOD-NY 与 Zinquin（商用 Zn²⁺ 探针）共染 A549 细胞，光照后双通道成像并定量
+**目的**: 验证 Zn-STIMO 方法在三维人源类器官中的适用性
+**方法概述**: 在 CCCP 处理的 iPSC 分化肝脏类器官中进行 Z-stack SIM 成像
 
 | 参数 | 值 |
 |------|-----|
-| 细胞系 | A549 |
-| NOD-NY 浓度 | 5 × 10⁻⁶ mol/L |
-| Zinquin 浓度 | 5 × 10⁻⁶ mol/L |
-| 绿色通道 | λex = 488 nm，λem = 500–560 nm |
-| 蓝色通道 | λex = 405 nm，λem = 450–500 nm |
-| 绿色通道增强倍数 | 5.88 倍 |
-| 蓝色通道增强倍数 | 2.50 倍 |
-| TPEN 浓度 | 5 × 10⁻⁵ mol/L |
-| TPEN 效果 | 绿色和蓝色荧光均逐渐减弱 |
-| 标尺 | 25 μm |
+| 类器官来源 | 人 iPSC 诱导分化肝脏类器官 |
+| 分化方案 | 参照 Koike 等人方案 |
+| CCCP 处理 | 同细胞实验条件 |
+| 探针孵育时间 | 2 h |
+| Z-stack 成像深度 | 2.4、6.4、14.4 $\mu\text{m}$ |
+| 空间分辨率 | <200 nm |
+| 可识别细胞器 | 内质网（基于网状形态） |
 
-> **原文参考** — "a 5.88-fold and a 2.50-fold enhancement in the fluorescence intensity of NOD-NY and Zinquin were observed after light, respectively. Upon addition of 5 × 10⁻⁵ mol/L of membrane-permeable Zn²⁺ chelator, TPEN, the green and blue fluorescence signal both gradually decreased."
+> **原文参考** — "Z-stack SIM imaging of CCCP-treated liver organoids incubated with NapBu-BPEA (2 h). Non-uniform fluorescence in cytoplasm at depths of 2.4, 6.4, and 14.4 μm. Imaging resolution <200 nm in organoids."
 
 ---
 
-> 由 paper-to-note skill 生成 | 2026-03-21
+## 参考文献索引
+
+4. Berg, J. M. & Shi, Y. The galvanization of biology: a growing appreciation for the roles of zinc. *Science* 271, 1081–1085 (1996).
+  ^ref-4
+
+8. Que, E. L. et al. Quantitative mapping of zinc fluxes in the mammalian egg reveals the origin of fertilization-induced zinc sparks. *Nat. Chem.* 7, 130–139 (2015).
+  ^ref-8
+
+10. Kambe, T. et al. The physiological, biochemical, and molecular roles of zinc transporters in zinc homeostasis and metabolism. *Physiol. Rev.* 95, 749–784 (2015).
+  ^ref-10
+
+11. Liuzzi, J. P. et al. Zinc and autophagy. *Biometals* 27, 1087–1096 (2014).
+  ^ref-11
+
+21. Miranda, J. G. et al. New alternately colored FRET sensors for simultaneous monitoring of Zn²⁺ in multiple cellular locations. *PLoS ONE* 7, e49371 (2012).
+  ^ref-21
+
+28. Huang, X. et al. Fast, long-term, super-resolution imaging with Hessian structured illumination microscopy. *Nat. Biotechnol.* 36, 451–459 (2018).
+  ^ref-28
+
+35. Li, X. et al. A fast and specific fluorescent probe for thioredoxin reductase that works via disulphide bond cleavage. *Nat. Commun.* 10, 2745 (2019).
+  ^ref-35
+
+37. Xu, Z. et al. Fluorescent chemosensors for Zn²⁺. *Chem. Soc. Rev.* 39, 1996–2006 (2010).
+  ^ref-37
+
+39. Zhang, C. et al. In vitro and in vivo imaging application of a 1,8-naphthalimide-derived Zn²⁺ fluorescent sensor with nuclear envelope penetrability. *Chem. Commun.* 49, 11430–11432 (2013).
+  ^ref-39
+
+47. Han, Y. et al. Cell-permeable organic fluorescent probes for live-cell long-term super-resolution imaging reveal lysosome-mitochondrion interactions. *Nat. Commun.* 8, 1307 (2017).
+  ^ref-47
+
+50. Liu, F. & Guan, J. L. FIP200, an essential component of mammalian autophagy is indispensible for fetal hematopoiesis. *Autophagy* 7, 229–230 (2011).
+  ^ref-50
+
+51. Wallot-Hieke, N. et al. Systematic analysis of ATG13 domain requirements for autophagy induction. *Autophagy* 14, 743–763 (2018).
+  ^ref-51
+
+56. Koike, H. et al. Modelling human hepato-biliary-pancreatic organogenesis from the foregut-midgut boundary. *Nature* 574, 112–116 (2019).
+  ^ref-56
+
+---
+
+> 由 paper-to-note skill 生成 | 2026-03-26

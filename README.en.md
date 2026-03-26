@@ -97,8 +97,8 @@ Instead of only producing a generic summary, it focuses on the parts that matter
 - **Interactive mode**  
   An optional guided discussion helps the reader consolidate understanding. The discussion is then written into the `My Understandings` section.
 
-- **`Obsidian`-ready output**  
-  The final output is a clean `Markdown` note that can be dropped directly into an `Obsidian` vault.
+- **`Obsidian`-ready output**
+  The final output is a clean `Markdown` note with `[[#^ref-n|[n]]]` reference links and `LaTeX` formula rendering (`$Zn^{2+}$`, `$K_d$`, etc.), ready for an `Obsidian` vault.
 
 ## Detailed note structure
 
@@ -256,6 +256,24 @@ paper-to-note/
 - Does not handle a separate `Supplementary Information` PDF yet
 - Coverage may be incomplete for papers longer than 40 pages
 - When routing confidence is `medium` or `low`, the skill asks for confirmation before continuing
+
+## Changelog
+
+### v1.0.1
+
+- Note generation now strictly follows project templates and prompt specifications
+- Default Chinese-language output with only compound names, abbreviations, and cell lines kept in English
+- Obsidian reference linking (`[[#^ref-n|[n]]]` → `^ref-n` block IDs in the reference index)
+- Math and chemistry formulas in LaTeX syntax
+- Table rendering fix (empty lines before and after tables for Obsidian compatibility)
+- Standardized file naming (`{journal-abbr}--{year}--{topic-summary}.md`)
+- Added experimental-paper sample output
+
+### v1.0.0
+
+- Dual-track pipeline (experimental + deep learning)
+- LaTeX formatting support
+- MinerU PDF preprocessing integration
 
 ## License
 
